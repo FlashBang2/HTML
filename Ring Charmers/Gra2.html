@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Ring Charmers</title>
+</head>
+<body text="#ffffff" bgcolor='black'>
+  <div id='text'>
+    This is your character card write it down and never forget to look at it and your class when taking items this might turn the tides in race for a treasure.
+    </div>
+    <div id="text2">
+    </div>
+  <button style="background-Image:url('drewno.png')" id="Next" onclick="a()">Next adventurer</button>
+<button style="background-Image:url('drewno.png')" onclick="b()">Let race begin</button>
+<script>
+    var ST=0
+    var AR=0
+    var AW=0
+    var LC=0
+    var class_character=""
+    const params=(new URL(document.location)).searchParams;
+    const name=params.get("name");
+  window.addEventListener("load", function()
+  {
+   if(localStorage.getItem("a")>4)
+   {
+   document.getElementById("Next").remove();
+   }
+    do
+    {
+      ST=Math.floor(Math.random() *61) + 30;
+      AR=Math.floor(Math.random() *61) + 30;
+      AW=Math.floor(Math.random() *61) + 30;
+      LC=Math.floor(Math.random() *61) + 30;
+    }
+    while(ST==AR || ST==AW || ST==LC || AR==AW || AR==LC || LC==AW)
+    if(ST>AR && ST>AW && ST>LC)
+    {
+      class_character="Sharpshooter";
+    }
+    else if (AR>AW && AR>LC)
+    {
+      class_character="Paladin";
+    }
+    else if (LC>AW)
+    {
+      class_character="Leprechaun";
+    }
+    else
+    {
+      class_character="Assassin";
+    }
+    document.getElementById("text2").innerHTML="Name:"+name+" HP:100 AT:10 AR:"+AR+" ST:"+ST+" AW:"+AW+" LC:"+LC+" Class:"+class_character;
+});
+    //Player 1
+    function a ()
+    {
+    var a=localStorage.getItem("a");
+    a++;
+    localStorage.setItem("a",a);
+    if (a==1)
+    {
+    localStorage.setItem("P1name",name);
+    localStorage.setItem("P1HP",100);
+    localStorage.setItem("P1AT",10);
+    localStorage.setItem("P1AR",AR);
+    localStorage.setItem("P1ST",ST);
+    localStorage.setItem("P1AW",AW);
+    localStorage.setItem("P1LC",LC);
+    localStorage.setItem("P1Class",class_character);
+    localStorage.setItem("P1IN",0);
+    localStorage.setItem("P1M",0);
+    localStorage.setItem("P1ADV",1);
+    localStorage.setItem("P1VAL",6);
+    localStorage.setItem("P1EQ1",0);
+    localStorage.setItem("P1EQ2",0);
+    localStorage.setItem("P1EQ3",0);
+    localStorage.setItem("P1EQ4",0);
+    }
+    if(a==2)
+    {
+    localStorage.setItem("P2name",name);
+    localStorage.setItem("P2HP",100);
+    localStorage.setItem("P2AT",10);
+    localStorage.setItem("P2AT",10);
+    localStorage.setItem("P2AR",AR);
+    localStorage.setItem("P2ST",ST);
+    localStorage.setItem("P2AW",AW);
+    localStorage.setItem("P2LC",LC);
+    localStorage.setItem("P2Class",class_character);
+    localStorage.setItem("P2IN",0)
+    localStorage.setItem("P2M",0);
+    localStorage.setItem("P2ADV",1);
+    localStorage.setItem("P2VAL",6);
+    localStorage.setItem("P2EQ1",0);
+    localStorage.setItem("P2EQ2",0);
+    localStorage.setItem("P2EQ3",0);
+    localStorage.setItem("P2EQ4",0);
+    }
+    if(a==3)
+    {
+    localStorage.setItem("P3name",name);
+    localStorage.setItem("P3HP",100);
+    localStorage.setItem("P3AT",10);
+    localStorage.setItem("P3AT",10);
+    localStorage.setItem("P3AR",AR);
+    localStorage.setItem("P3ST",ST);
+    localStorage.setItem("P3AW",AW);
+    localStorage.setItem("P3LC",LC);
+    localStorage.setItem("P3Class",class_character);
+    localStorage.setItem("P3IN",0);
+    localStorage.setItem("P3M",0);
+    localStorage.setItem("P3ADV",1);
+    localStorage.setItem("P3VAL",6);
+    localStorage.setItem("P3EQ1",0);
+    localStorage.setItem("P3EQ2",0);
+    localStorage.setItem("P3EQ3",0);
+    localStorage.setItem("P3EQ4",0);
+    }
+    if(a==4)
+    {
+    localStorage.setItem("P4name",name);
+    localStorage.setItem("P4HP",100);
+    localStorage.setItem("P4AT",10);
+    localStorage.setItem("P4AT",10);
+    localStorage.setItem("P4AR",AR);
+    localStorage.setItem("P4ST",ST);
+    localStorage.setItem("P4AW",AW);
+    localStorage.setItem("P4LC",LC);
+    localStorage.setItem("P4Class",class_character);
+    localStorage.setItem("P4IN",0);
+    localStorage.setItem("P4M",0);
+    localStorage.setItem("P4ADV",1);
+    localStorage.setItem("P4VAL",6);
+    localStorage.setItem("P4EQ1",0);
+    localStorage.setItem("P4EQ2",0);
+    localStorage.setItem("P4EQ3",0);
+    localStorage.setItem("P4EQ4",0);
+    }
+    if(a==5)
+    {
+    localStorage.setItem("P5name",name);
+    localStorage.setItem("P5HP",100);
+    localStorage.setItem("P5AT",10);
+    localStorage.setItem("P5AT",10);
+    localStorage.setItem("P5AR",AR);
+    localStorage.setItem("P5ST",ST);
+    localStorage.setItem("P5AW",AW);
+    localStorage.setItem("P5LC",LC);
+    localStorage.setItem("P5Class",class_character);
+    localStorage.setItem("P5IN",0);
+    localStorage.setItem("P5M",0);
+    localStorage.setItem("P5ADV",1);
+    localStorage.setItem("P5VAL",6);
+    localStorage.setItem("P5EQ1",0);
+    localStorage.setItem("P5EQ2",0);
+    localStorage.setItem("P5EQ3",0);
+    localStorage.setItem("P5EQ4",0);
+    document.getElementById("Next").remove();
+    }
+     location.href = 'Gra.html';
+    }
+
+    function b ()
+    {
+    var a=localStorage.getItem("a");
+    if (a!=5)
+    {
+    a++;
+    }
+    localStorage.setItem("a",a);
+    if(a==2)
+    {
+    localStorage.setItem("P2name",name);
+    localStorage.setItem("P2HP",100);
+    localStorage.setItem("P2AT",10);
+    localStorage.setItem("P2AT",10);
+    localStorage.setItem("P2AR",AR);
+    localStorage.setItem("P2ST",ST);
+    localStorage.setItem("P2AW",AW);
+    localStorage.setItem("P2LC",LC);
+    localStorage.setItem("P2Class",class_character);
+    localStorage.setItem("P2IN",0);
+    localStorage.setItem("P2M",0);
+    localStorage.setItem("P2ADV",1);
+    localStorage.setItem("P2VAL",6);
+    localStorage.setItem("P2EQ1",0);
+    localStorage.setItem("P2EQ2",0);
+    localStorage.setItem("P2EQ3",0);
+    localStorage.setItem("P2EQ4",0);
+    location.href='Gra4.html';
+    }
+    if(a==3)
+    {
+    localStorage.setItem("P3name",name);
+    localStorage.setItem("P3HP",100);
+    localStorage.setItem("P3AT",10);
+    localStorage.setItem("P3AT",10);
+    localStorage.setItem("P3AR",AR);
+    localStorage.setItem("P3ST",ST);
+    localStorage.setItem("P3AW",AW);
+    localStorage.setItem("P3LC",LC);
+    localStorage.setItem("P3Class",class_character);
+    localStorage.setItem("P3IN",0);
+    localStorage.setItem("P3M",0);
+    localStorage.setItem("P3ADV",1);
+    localStorage.setItem("P3VAL",6);
+    localStorage.setItem("P3EQ1",0);
+    localStorage.setItem("P3EQ2",0);
+    localStorage.setItem("P3EQ3",0);
+    localStorage.setItem("P3EQ4",0);
+    location.href='Gra4.html';
+    }
+    if(a==4)
+    {
+    localStorage.setItem("P4name",name);
+    localStorage.setItem("P4HP",100);
+    localStorage.setItem("P4AT",10);
+    localStorage.setItem("P4AT",10);
+    localStorage.setItem("P4AR",AR);
+    localStorage.setItem("P4ST",ST);
+    localStorage.setItem("P4AW",AW);
+    localStorage.setItem("P4LC",LC);
+    localStorage.setItem("P4Class",class_character);
+    localStorage.setItem("P4IN",0);
+    localStorage.setItem("P4M",0);
+    localStorage.setItem("P4ADV",1);
+    localStorage.setItem("P4VAL",6);
+    localStorage.setItem("P4EQ1",0);
+    localStorage.setItem("P4EQ2",0);
+    localStorage.setItem("P4EQ3",0);
+    localStorage.setItem("P4EQ4",0);
+    location.href='Gra4.html';
+    }
+    if(a==5)
+    {
+    localStorage.setItem("P5name",name);
+    localStorage.setItem("P5HP",100);
+    localStorage.setItem("P5AT",10);
+    localStorage.setItem("P5AT",10);
+    localStorage.setItem("P5AR",AR);
+    localStorage.setItem("P5ST",ST);
+    localStorage.setItem("P5AW",AW);
+    localStorage.setItem("P5LC",LC);
+    localStorage.setItem("P5Class",class_character);
+    localStorage.setItem("P5IN",0);
+    localStorage.setItem("P5M",0);
+    localStorage.setItem("P5ADV",1);
+    localStorage.setItem("P5VAL",6);
+    localStorage.setItem("P5EQ1",0);
+    localStorage.setItem("P5EQ2",0);
+    localStorage.setItem("P5EQ3",0);
+    localStorage.setItem("P5EQ4",0);
+    location.href='Gra4.html';
+    }
+    if (a==1)
+    {
+    localStorage.setItem("P1name",name);
+    localStorage.setItem("P1HP",100);
+    localStorage.setItem("P1AT",10);
+    localStorage.setItem("P1AR",AR);
+    localStorage.setItem("P1ST",ST);
+    localStorage.setItem("P1AW",AW);
+    localStorage.setItem("P1LC",LC);
+    localStorage.setItem("P1Class",class_character);
+    localStorage.setItem("P1IN",0);
+    localStorage.setItem("P1M",0);
+    localStorage.setItem("P1ADV",1);
+    localStorage.setItem("P1VAL",6);
+    localStorage.setItem("P1EQ1",0);
+    localStorage.setItem("P1EQ2",0);
+    localStorage.setItem("P1EQ3",0);
+    localStorage.setItem("P1EQ4",0);
+    location.href = 'Gra3.html';
+    }
+    }
+    window.onclose=function ()
+    {
+     clear();
+    }
+  </script>
+</body>
+</html>
